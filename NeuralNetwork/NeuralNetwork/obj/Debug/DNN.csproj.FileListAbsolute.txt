@@ -1,0 +1,15 @@
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\bin\Debug\kernel.ptx
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\bin\Debug\DNN.exe.config
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\bin\Debug\DNN.exe
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\bin\Debug\DNN.pdb
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\bin\Debug\CudalibManaged.dll
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\bin\Debug\CudaBlas.dll
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\bin\Debug\ManagedCuda.dll
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\bin\Debug\CudalibManaged.pdb
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\bin\Debug\CudaBlas.pdb
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\bin\Debug\CudaBlas.xml
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\bin\Debug\ManagedCuda.pdb
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\bin\Debug\ManagedCuda.xml
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\obj\Debug\DNN.csprojResolveAssemblyReference.cache
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\obj\Debug\DNN.exe
+D:\vinods\Repos\MSR-DSSM\private\vinods\DNN\DNN\obj\Debug\DNN.pdb

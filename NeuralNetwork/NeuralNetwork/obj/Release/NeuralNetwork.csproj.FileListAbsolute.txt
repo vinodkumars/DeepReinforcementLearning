@@ -1,0 +1,15 @@
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\bin\Release\kernel.ptx
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\bin\Release\DNN.exe.config
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\bin\Release\DNN.exe
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\bin\Release\DNN.pdb
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\bin\Release\CudalibManaged.dll
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\bin\Release\CudaBlas.dll
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\bin\Release\ManagedCuda.dll
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\bin\Release\CudalibManaged.pdb
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\bin\Release\CudaBlas.pdb
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\bin\Release\CudaBlas.xml
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\bin\Release\ManagedCuda.pdb
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\bin\Release\ManagedCuda.xml
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\obj\Release\NeuralNetwork.csprojResolveAssemblyReference.cache
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\obj\Release\DNN.exe
+D:\vinods\Repos\MSR-DSSM\private\vinods\NeuralNetwork\NeuralNetwork\obj\Release\DNN.pdb

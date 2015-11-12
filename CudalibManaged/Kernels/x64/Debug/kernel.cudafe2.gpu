@@ -1,0 +1,666 @@
+#line 494 "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\VC\\include\\crtdefs.h"
+typedef unsigned long long size_t;
+#include "crt/device_runtime.h"
+#if !defined(__CUDABE__)
+#line 324 "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v7.0\\include\\math_functions.h"
+ __device_builtin__ ___device__(extern  __no_sc__) float fmaxf(float, float);
+#endif
+#if !defined(__CUDABE__)
+#line 7335 "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v7.0\\include\\math_functions.h"
+ __device_builtin__ ___device__(extern  __no_sc__) float tanhf(float);
+#endif
+#if !defined(__CUDABE__)
+#line 7337 "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v7.0\\include\\math_functions.h"
+ __device_builtin__ ___device__(extern  __no_sc__) float logf(float);
+#endif
+#line 1139 "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\VC\\include\\math.h"
+___device__(extern  __no_sc__) __inline__ float _Z4tanhf(float);
+#line 11 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z16matrixPlusVectorPfS_S_ii(float *, float *, float *, int, int);
+#line 22 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z10matrixTanhPfS_ii(float *, float *, int, int);
+#line 33 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z26matrixIncorporateTanhDerivPfS_S_ii(float *, float *, float *, int, int);
+#line 44 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z10matrixReLuPfS_ii(float *, float *, int, int);
+#line 55 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z26matrixIncorporateReLuDerivPfS_S_ii(float *, float *, float *, int, int);
+#line 66 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z13matrixSigmoidPfS_ii(float *, float *, int, int);
+#line 78 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z29matrixIncorporateSigmoidDerivPfS_S_ii(float *, float *, float *, int, int);
+#line 89 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z23matrixCrossEntropyErrorPfS_S_ii(float *, float *, float *, int, int);
+#line 101 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z26matrixBellmanErrorAndDerivPfS_S_S_S_S_fS_ii(float *, float *, float *, float *, float *, float *, float, float *, int, int);
+#line 122 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z21DqnStanfordEvaluationPfS_S_S_S_i(float *, float *, float *, float *, float *, int);
+#line 138 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z14matrixHadamardPfS_fS_fii(float *, float *, float, float *, float, int, int);
+#line 149 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z13columnwiseMaxPfS_ii(float *, float *, int, int);
+#line 167 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ extern void _Z18columnwiseMaxIndexPfS_ii(float *, float *, int, int);
+#include "common_functions.h"
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#line 1139 "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\VC\\include\\math.h"
+___device__( __no_sc__) __inline__ float _Z4tanhf(
+#line 1139 "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\VC\\include\\math.h"
+float _X){
+#line 1139 "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\VC\\include\\math.h"
+{
+#line 1140 "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\VC\\include\\math.h"
+{
+#line 1140 "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\VC\\include\\math.h"
+return tanhf(_X);
+#line 1140 "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\VC\\include\\math.h"
+}
+#line 1140 "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\VC\\include\\math.h"
+}}
+#line 11 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z16matrixPlusVectorPfS_S_ii(
+#line 11 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *input, 
+#line 11 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *bias, 
+#line 11 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *output, 
+#line 11 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows, 
+#line 11 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int columns){
+#line 11 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 12 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 13 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224305_6_non_const_i;
+#line 14 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224306_6_non_const_j;
+#line 13 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224305_6_non_const_i = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 14 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224306_6_non_const_j = ((int)(((blockDim.y) * (blockIdx.y)) + (threadIdx.y)));
+#line 15 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((__cuda_local_var_224305_6_non_const_i < rows) && (__cuda_local_var_224306_6_non_const_j < columns))
+#line 16 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 17 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224309_7_non_const_ij;
+#line 17 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224309_7_non_const_ij = ((__cuda_local_var_224306_6_non_const_j * rows) + __cuda_local_var_224305_6_non_const_i);
+#line 18 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(output[__cuda_local_var_224309_7_non_const_ij]) = ((input[__cuda_local_var_224309_7_non_const_ij]) + (bias[__cuda_local_var_224305_6_non_const_i]));
+#line 19 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 20 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 20 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
+#line 22 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z10matrixTanhPfS_ii(
+#line 22 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *input, 
+#line 22 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *output, 
+#line 22 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows, 
+#line 22 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int columns){
+#line 22 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 23 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 24 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224316_6_non_const_i;
+#line 25 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224317_6_non_const_j;
+#line 24 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224316_6_non_const_i = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 25 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224317_6_non_const_j = ((int)(((blockDim.y) * (blockIdx.y)) + (threadIdx.y)));
+#line 26 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((__cuda_local_var_224316_6_non_const_i < rows) && (__cuda_local_var_224317_6_non_const_j < columns))
+#line 27 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 28 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224320_7_non_const_ij;
+#line 28 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224320_7_non_const_ij = ((__cuda_local_var_224317_6_non_const_j * rows) + __cuda_local_var_224316_6_non_const_i);
+#line 29 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(output[__cuda_local_var_224320_7_non_const_ij]) = (_Z4tanhf((input[__cuda_local_var_224320_7_non_const_ij])));
+#line 30 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 31 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 31 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
+#line 33 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z26matrixIncorporateTanhDerivPfS_S_ii(
+#line 33 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *base, 
+#line 33 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *activation, 
+#line 33 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *output, 
+#line 33 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows, 
+#line 33 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int columns){
+#line 33 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 34 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 35 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224327_6_non_const_i;
+#line 36 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224328_6_non_const_j;
+#line 35 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224327_6_non_const_i = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 36 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224328_6_non_const_j = ((int)(((blockDim.y) * (blockIdx.y)) + (threadIdx.y)));
+#line 37 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((__cuda_local_var_224327_6_non_const_i < rows) && (__cuda_local_var_224328_6_non_const_j < columns))
+#line 38 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 39 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224331_7_non_const_ij;
+#line 39 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224331_7_non_const_ij = ((__cuda_local_var_224328_6_non_const_j * rows) + __cuda_local_var_224327_6_non_const_i);
+#line 40 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(output[__cuda_local_var_224331_7_non_const_ij]) = (((base[__cuda_local_var_224331_7_non_const_ij]) * ((1.0F) + (activation[__cuda_local_var_224331_7_non_const_ij]))) * ((1.0F) - (activation[__cuda_local_var_224331_7_non_const_ij])));
+#line 41 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 42 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 42 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
+#line 44 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z10matrixReLuPfS_ii(
+#line 44 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *input, 
+#line 44 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *output, 
+#line 44 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows, 
+#line 44 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int columns){
+#line 44 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 45 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 46 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224338_6_non_const_i;
+#line 47 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224339_6_non_const_j;
+#line 46 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224338_6_non_const_i = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 47 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224339_6_non_const_j = ((int)(((blockDim.y) * (blockIdx.y)) + (threadIdx.y)));
+#line 48 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((__cuda_local_var_224338_6_non_const_i < rows) && (__cuda_local_var_224339_6_non_const_j < columns))
+#line 49 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 50 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224342_7_non_const_ij;
+#line 50 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224342_7_non_const_ij = ((__cuda_local_var_224339_6_non_const_j * rows) + __cuda_local_var_224338_6_non_const_i);
+#line 51 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(output[__cuda_local_var_224342_7_non_const_ij]) = (fmaxf((input[__cuda_local_var_224342_7_non_const_ij]), (0.0F)));
+#line 52 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 53 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 53 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
+#line 55 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z26matrixIncorporateReLuDerivPfS_S_ii(
+#line 55 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *base, 
+#line 55 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *activation, 
+#line 55 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *output, 
+#line 55 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows, 
+#line 55 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int columns){
+#line 55 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 56 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 57 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224349_6_non_const_j;
+#line 58 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224350_6_non_const_i;
+#line 57 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224349_6_non_const_j = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 58 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224350_6_non_const_i = ((int)(((blockDim.y) * (blockIdx.y)) + (threadIdx.y)));
+#line 59 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((__cuda_local_var_224350_6_non_const_i < rows) && (__cuda_local_var_224349_6_non_const_j < columns))
+#line 60 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 61 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224353_7_non_const_ij;
+#line 61 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224353_7_non_const_ij = ((__cuda_local_var_224349_6_non_const_j * rows) + __cuda_local_var_224350_6_non_const_i);
+#line 62 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(output[__cuda_local_var_224353_7_non_const_ij]) = (((activation[__cuda_local_var_224353_7_non_const_ij]) <= (0.0F)) ? (0.0F) : (base[__cuda_local_var_224353_7_non_const_ij]));
+#line 63 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 64 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 64 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
+#line 66 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z13matrixSigmoidPfS_ii(
+#line 66 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *input, 
+#line 66 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *output, 
+#line 66 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows, 
+#line 66 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int columns){
+#line 66 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 67 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 68 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224360_6_non_const_i;
+#line 69 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224361_6_non_const_j;
+#line 68 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224360_6_non_const_i = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 69 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224361_6_non_const_j = ((int)(((blockDim.y) * (blockIdx.y)) + (threadIdx.y)));
+#line 70 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((__cuda_local_var_224360_6_non_const_i < rows) && (__cuda_local_var_224361_6_non_const_j < columns))
+#line 71 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 72 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224364_7_non_const_ij;
+#line 72 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224364_7_non_const_ij = ((__cuda_local_var_224361_6_non_const_j * rows) + __cuda_local_var_224360_6_non_const_i);
+#line 74 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(output[__cuda_local_var_224364_7_non_const_ij]) = ((float)(fdividef(((double)((tanhf(((float)(fdividef(((double)(input[__cuda_local_var_224364_7_non_const_ij])), (2.0)))))) + (1.0F))), (2.0))));
+#line 75 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 76 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 76 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
+#line 78 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z29matrixIncorporateSigmoidDerivPfS_S_ii(
+#line 78 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *base, 
+#line 78 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *activation, 
+#line 78 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *output, 
+#line 78 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows, 
+#line 78 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int columns){
+#line 78 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 79 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 80 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224372_6_non_const_i;
+#line 81 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224373_6_non_const_j;
+#line 80 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224372_6_non_const_i = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 81 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224373_6_non_const_j = ((int)(((blockDim.y) * (blockIdx.y)) + (threadIdx.y)));
+#line 82 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((__cuda_local_var_224372_6_non_const_i < rows) && (__cuda_local_var_224373_6_non_const_j < columns))
+#line 83 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 84 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224376_7_non_const_ij;
+#line 84 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224376_7_non_const_ij = ((__cuda_local_var_224373_6_non_const_j * rows) + __cuda_local_var_224372_6_non_const_i);
+#line 85 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(output[__cuda_local_var_224376_7_non_const_ij]) = (((base[__cuda_local_var_224376_7_non_const_ij]) * (activation[__cuda_local_var_224376_7_non_const_ij])) * ((1.0F) - (activation[__cuda_local_var_224376_7_non_const_ij])));
+#line 86 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 87 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 87 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
+#line 89 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z23matrixCrossEntropyErrorPfS_S_ii(
+#line 89 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *sigmoidScores, 
+#line 89 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *trueLabels, 
+#line 89 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *output, 
+#line 89 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows, 
+#line 89 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int columns){
+#line 89 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 90 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 91 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224383_6_non_const_i;
+#line 92 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224384_6_non_const_j;
+#line 91 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224383_6_non_const_i = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 92 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224384_6_non_const_j = ((int)(((blockDim.y) * (blockIdx.y)) + (threadIdx.y)));
+#line 93 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((__cuda_local_var_224383_6_non_const_i < rows) && (__cuda_local_var_224384_6_non_const_j < columns))
+#line 94 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 95 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224387_7_non_const_ij;
+#line 95 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224387_7_non_const_ij = ((__cuda_local_var_224384_6_non_const_j * rows) + __cuda_local_var_224383_6_non_const_i);
+#line 96 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(output[__cuda_local_var_224387_7_non_const_ij]) = (((trueLabels[__cuda_local_var_224387_7_non_const_ij]) > (0.0F)) ? (logf(((sigmoidScores[__cuda_local_var_224387_7_non_const_ij]) + (1.192092896e-007F)))) : (logf((((1.0F) - (sigmoidScores[__cuda_local_var_224387_7_non_const_ij])) + (1.192092896e-007F)))));
+#line 97 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(output[__cuda_local_var_224387_7_non_const_ij]) *= (-1.0F);
+#line 98 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 99 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 99 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
+#line 101 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z26matrixBellmanErrorAndDerivPfS_S_S_S_S_fS_ii(
+#line 101 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *predictedQValues, 
+#line 101 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *maxQHatValues, 
+#line 101 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *chosenActionIndices, 
+#line 101 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *currentRewards, 
+#line 101 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *error, 
+#line 101 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *errorDerivative, 
+#line 102 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float discount, 
+#line 102 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *isLastEpisode, 
+#line 102 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows, 
+#line 102 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int columns){
+#line 102 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 103 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 104 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224396_6_non_const_i;
+#line 105 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224397_6_non_const_j;
+#line 104 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224396_6_non_const_i = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 105 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224397_6_non_const_j = ((int)(((blockDim.y) * (blockIdx.y)) + (threadIdx.y)));
+#line 106 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((__cuda_local_var_224396_6_non_const_i < rows) && (__cuda_local_var_224397_6_non_const_j < columns))
+#line 107 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 108 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224400_7_non_const_ij;
+#line 109 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ float __cuda_local_var_224401_9_non_const_y;
+#line 108 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224400_7_non_const_ij = ((__cuda_local_var_224397_6_non_const_j * rows) + __cuda_local_var_224396_6_non_const_i);
+#line 109 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224401_9_non_const_y = (((isLastEpisode[__cuda_local_var_224397_6_non_const_j]) > (0.0F)) ? (currentRewards[__cuda_local_var_224397_6_non_const_j]) : ((currentRewards[__cuda_local_var_224397_6_non_const_j]) + (discount * (maxQHatValues[__cuda_local_var_224397_6_non_const_j]))));
+#line 110 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(errorDerivative[__cuda_local_var_224400_7_non_const_ij]) = (0.0F);
+#line 113 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if (((float)__cuda_local_var_224396_6_non_const_i) == (chosenActionIndices[__cuda_local_var_224397_6_non_const_j]))
+#line 114 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 115 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ float __cuda_local_var_224407_10_non_const_tmp;
+#line 115 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224407_10_non_const_tmp = ((predictedQValues[__cuda_local_var_224396_6_non_const_i]) - __cuda_local_var_224401_9_non_const_y);
+#line 116 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(errorDerivative[__cuda_local_var_224400_7_non_const_ij]) = __cuda_local_var_224407_10_non_const_tmp;
+#line 117 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(error[__cuda_local_var_224397_6_non_const_j]) = ((float)(((0.5) * ((double)__cuda_local_var_224407_10_non_const_tmp)) * ((double)__cuda_local_var_224407_10_non_const_tmp)));
+#line 118 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 119 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 120 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 120 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
+#line 122 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z21DqnStanfordEvaluationPfS_S_S_S_i(
+#line 122 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *predictedactionIndices, 
+#line 122 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *chosenActionIndices, 
+#line 122 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *currentRewards, 
+#line 122 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *matchPredictRewards, 
+#line 122 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *nonMatchPredictRewards, 
+#line 122 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows){
+#line 122 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 123 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 124 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224416_6_non_const_i;
+#line 124 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224416_6_non_const_i = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 125 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if (__cuda_local_var_224416_6_non_const_i < rows)
+#line 126 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 127 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((predictedactionIndices[__cuda_local_var_224416_6_non_const_i]) == (chosenActionIndices[__cuda_local_var_224416_6_non_const_i]))
+#line 128 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 129 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(matchPredictRewards[__cuda_local_var_224416_6_non_const_i]) = (currentRewards[__cuda_local_var_224416_6_non_const_i]);
+#line 130 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 132 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+else 
+#line 132 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 133 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(nonMatchPredictRewards[__cuda_local_var_224416_6_non_const_i]) = (currentRewards[__cuda_local_var_224416_6_non_const_i]);
+#line 134 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 135 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 136 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 136 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
+#line 138 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z14matrixHadamardPfS_fS_fii(
+#line 138 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *input1, 
+#line 138 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *input2, 
+#line 138 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float alpha, 
+#line 138 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *output, 
+#line 138 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float beta, 
+#line 138 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows, 
+#line 138 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int columns){
+#line 138 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 139 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 140 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224432_6_non_const_i;
+#line 141 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224433_6_non_const_j;
+#line 140 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224432_6_non_const_i = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 141 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224433_6_non_const_j = ((int)(((blockDim.y) * (blockIdx.y)) + (threadIdx.y)));
+#line 142 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((__cuda_local_var_224432_6_non_const_i < rows) && (__cuda_local_var_224433_6_non_const_j < columns))
+#line 143 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 144 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224436_7_non_const_ij;
+#line 144 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224436_7_non_const_ij = ((__cuda_local_var_224433_6_non_const_j * rows) + __cuda_local_var_224432_6_non_const_i);
+#line 145 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(output[__cuda_local_var_224436_7_non_const_ij]) = (((alpha * (input1[__cuda_local_var_224436_7_non_const_ij])) * (input2[__cuda_local_var_224436_7_non_const_ij])) + (beta * (output[__cuda_local_var_224436_7_non_const_ij])));
+#line 146 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 147 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 147 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
+#line 149 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z13columnwiseMaxPfS_ii(
+#line 149 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *input, 
+#line 149 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *output, 
+#line 149 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows, 
+#line 149 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int columns){
+#line 149 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 150 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 151 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224443_6_non_const_j;
+#line 151 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224443_6_non_const_j = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 152 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if (__cuda_local_var_224443_6_non_const_j < columns)
+#line 153 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 154 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ float __cuda_local_var_224446_9_non_const_maxInColumn;
+#line 154 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224446_9_non_const_maxInColumn = (input[((__cuda_local_var_224443_6_non_const_j * rows) + 0)]);
+#line 154 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 155 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int i;
+#line 155 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+i = 0; {
+#line 155 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+for (; (i < rows); i++)
+#line 156 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 157 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224449_8_non_const_ij;
+#line 157 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224449_8_non_const_ij = ((__cuda_local_var_224443_6_non_const_j * rows) + i);
+#line 158 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((input[__cuda_local_var_224449_8_non_const_ij]) > __cuda_local_var_224446_9_non_const_maxInColumn)
+#line 159 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 160 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224446_9_non_const_maxInColumn = (input[__cuda_local_var_224449_8_non_const_ij]);
+#line 161 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 162 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} }
+#line 162 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 163 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(output[__cuda_local_var_224443_6_non_const_j]) = __cuda_local_var_224446_9_non_const_maxInColumn;
+#line 164 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 165 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 165 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
+#line 167 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__global__ __var_used__ void _Z18columnwiseMaxIndexPfS_ii(
+#line 167 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *input, 
+#line 167 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+float *output, 
+#line 167 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int rows, 
+#line 167 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+int columns){
+#line 167 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 168 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 169 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224461_6_non_const_j;
+#line 169 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224461_6_non_const_j = ((int)(((blockDim.x) * (blockIdx.x)) + (threadIdx.x)));
+#line 170 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if (__cuda_local_var_224461_6_non_const_j < columns)
+#line 171 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 172 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224464_7_non_const_maxInColumnIndex;
+#line 173 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ float __cuda_local_var_224465_9_non_const_maxInColumn;
+#line 172 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224464_7_non_const_maxInColumnIndex = 0;
+#line 173 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224465_9_non_const_maxInColumn = (input[((__cuda_local_var_224461_6_non_const_j * rows) + __cuda_local_var_224464_7_non_const_maxInColumnIndex)]);
+#line 173 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 174 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int i;
+#line 174 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+i = 0; {
+#line 174 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+for (; (i < rows); i++)
+#line 175 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 176 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+ int __cuda_local_var_224468_8_non_const_ij;
+#line 176 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224468_8_non_const_ij = ((__cuda_local_var_224461_6_non_const_j * rows) + i);
+#line 177 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+if ((input[__cuda_local_var_224468_8_non_const_ij]) > __cuda_local_var_224465_9_non_const_maxInColumn)
+#line 178 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+{
+#line 179 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224465_9_non_const_maxInColumn = (input[__cuda_local_var_224468_8_non_const_ij]);
+#line 180 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+__cuda_local_var_224464_7_non_const_maxInColumnIndex = i;
+#line 181 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 182 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} }
+#line 182 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 183 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+(output[__cuda_local_var_224461_6_non_const_j]) = ((float)__cuda_local_var_224464_7_non_const_maxInColumnIndex);
+#line 184 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}
+#line 185 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+} 
+#line 185 "D:/vinods/Repos/MSR-DSSM/private/vinods/CudalibManaged/Kernels/kernel.cu"
+}}
